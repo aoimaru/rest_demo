@@ -1,0 +1,33 @@
+version: "3"
+services:
+  rest_server:
+    build: ./rest_server
+    volumes:
+      - ./rest_server:/app
+      - ./src:/src
+    ports:
+      - 5000:5000
+    environment: 
+        TZ: Asia/Tokyo
+        FLASK_APP: run.py
+        FLASK_ENV: development
+    command: flask run -h 0.0.0.0
+    links:
+      - rest_database
+    tty: true
+
+  rest_database:
+    build: ./rest_database
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: mysql 
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    volumes:
+      - ./rest_database/data:/var/lib/mysql
+      - ./rest_database/my.cnf:/etc/mysql/conf.d/my.cnf
+      - ./rest_database/sql:/docker-entrypoint-initdb.d
+      - ./rest_database/log:/var/log/mysql
+    ports:
+      - 3316:3306
+

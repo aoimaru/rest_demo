@@ -1,0 +1,4 @@
+DROP DATABASE IF EXISTS sample01;
+CREATE DATABASE sample01;
+
+USE sample01;
