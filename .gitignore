@@ -1,4 +1,4 @@
-rest_database/data/*
-rest_database/log/*
+# rest_database/data/*
+# rest_database/log/*
 
 src/__pycache__
