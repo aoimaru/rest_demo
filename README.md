@@ -24,6 +24,12 @@ SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{password}@{host}/{database}?c
       'database': os.getenv('DB_DATABASE', 'sample01'),
     })
 ```
+#Curl
+```
+POST curl -X POST http://localhost:5000/student   -H "Content-Type:application/json"   -d "{\"name\":\"hoge\"}"
+```
+
+
 # Author
 * 中村碧海
 * 立命館大学 情報理工学部
