@@ -24,7 +24,7 @@ SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{password}@{host}/{database}?c
       'database': os.getenv('DB_DATABASE', 'sample01'),
     })
 ```
-#Curl
+# Curl
 ```
 curl http://0.0.0.0:5000/student
 POST curl -X POST http://0.0.0.0:5000/student   -H "Content-Type:application/json"   -d "{\"name\":\"hoge\"}"
