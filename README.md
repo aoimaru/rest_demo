@@ -27,9 +27,9 @@ SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://{user}:{password}@{host}/{database}?c
 # Curl
 ```
 curl http://0.0.0.0:5000/student
-POST curl -X POST http://0.0.0.0:5000/student   -H "Content-Type:application/json"   -d "{\"name\":\"hoge\"}"
-UPDATE curl -X PUT http://0.0.0.0:5000/student/2 -H "Content-Type:application/json" -d "{\"name\":\"laradock\"}"
-DELETE curl -X DELETE http://0.0.0.0:5000/student/3
+curl POST curl -X POST http://0.0.0.0:5000/student   -H "Content-Type:application/json"   -d "{\"name\":\"hoge\"}"
+curl UPDATE curl -X PUT http://0.0.0.0:5000/student/2 -H "Content-Type:application/json" -d "{\"name\":\"laradock\"}"
+curl DELETE curl -X DELETE http://0.0.0.0:5000/student/3
 ```
 
 
